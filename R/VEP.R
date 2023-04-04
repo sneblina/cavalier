@@ -42,6 +42,7 @@ get_vep_ann <- function(gds, vep_field,
                   hgvs_protein = str_extract(HGVSp, '(?<=:).+$') %>% str_replace('%3D', '='),
                   db_snp = str_extract(Existing_variation, 'rs[0-9]+'),
                   af_gnomad = gnomAD_AF,
+                  ac_gnomad = gnomAD_AC,
                   af_1000G = AF,
                   af_popmax = MAX_AF,
                   sift = str_extract(SIFT, '^.+(?=\\([0-9\\.]+\\)$)') %>% str_remove('_low_confidence'),
@@ -144,5 +145,6 @@ vep_col_spec <- cols(
     HIGH_INF_POS = col_character(),
     MOTIF_SCORE_CHANGE = col_character(),
     TRANSCRIPTION_FACTORS = col_character(),
-    PICK = col_integer()
+    PICK = col_integer(),
+    gnomAD_AC = col_double()
 )

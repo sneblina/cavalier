@@ -380,7 +380,8 @@ get_var_info <- function() {
     HGVSp = 'hgvs_protein',
     SIFT = 'sift',
     PolyPhen = 'polyphen',
-    `gnomAD AF` = 'af_gnomad'
+    `gnomAD AF` = 'af_gnomad',
+    `gnomAD AC` = 'ac_gnomad'
   )    
 }
 
