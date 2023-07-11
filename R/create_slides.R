@@ -381,7 +381,10 @@ get_var_info <- function(sv = FALSE) {
       HGVSp = 'hgvs_protein',
       SIFT = 'sift',
       PolyPhen = 'polyphen',
-      `gnomAD AF` = 'af_gnomad'
+      `gnomAD AF` = 'af_gnomad',
+      `gnomAD AC` = 'ac_gnomad',
+      `gnomAD AN` = 'an_gnomad',
+      `Number of homozygotes` = 'gnomAD_nhomalt'
     )
   } else {
     c(`Gene Symbol` = 'gene',

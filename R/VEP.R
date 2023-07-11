@@ -50,6 +50,9 @@ get_vep_ann <- function(gds,
                   af_gnomad = gnomAD_AF,
                   af_1000G = AF,
                   af_popmax = MAX_AF,
+                  ac_gnomad = gnomAD_AC,
+                  an_gnomad = gnomAD_AN,
+                  gnomAD_nhomalt = gnomAD_nhomalt,
                   sift = str_extract(SIFT, '^.+(?=\\([0-9\\.]+\\)$)') %>% str_remove('_low_confidence'),
                   sift_score = str_extract(SIFT, '(?<=\\()[0-9\\.]+(?=\\)$)') %>% as.numeric(),
                   polyphen = str_extract(PolyPhen, '^.+(?=\\([0-9\\.]+\\)$)'),
@@ -193,5 +196,8 @@ vep_col_spec <- cols(
     HIGH_INF_POS = col_character(),
     MOTIF_SCORE_CHANGE = col_character(),
     TRANSCRIPTION_FACTORS = col_character(),
-    PICK = col_integer()
+    PICK = col_integer(),
+    gnomAD_AC = col_double(),
+    gnomAD_nhomalt = col_double(),
+    gnomAD_AN = col_double()
 )
