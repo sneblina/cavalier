@@ -121,7 +121,7 @@ get_term_names <- function()
 #'@importFrom httr GET accept_json content
 #'@importFrom stringr str_c
 hpo_api_get <- function(extension,
-                        base_url = "https://hpo.jax.org/api/hpo/")
+                        base_url = "https://ontology.jax.org/api/hp/terms/")
 {
   url <- str_c(base_url, extension)
   
